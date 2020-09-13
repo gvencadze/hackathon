@@ -2,10 +2,27 @@ import React from 'react';
 
 //@vkontakte imports
 import '@vkontakte/vkui/dist/vkui.css';
-import {RichCell, Group, Panel, PanelHeader, View, PanelHeaderBack, Select, FormLayout, Input, Textarea, Button, File, Radio, Card, CardGrid} from "@vkontakte/vkui";
+import {
+	RichCell,
+	Group,
+	Panel,
+	PanelHeader,
+	View,
+	PanelHeaderBack,
+	Select,
+	FormLayout,
+	Input,
+	Textarea,
+	Button,
+	File,
+	Radio,
+	Card,
+	CardGrid,
+	PanelHeaderButton
+} from "@vkontakte/vkui";
 
 //@vkontakte icons
-import {Icon28CalendarOutline, Icon28TargetOutline, Icon28ChevronRightOutline, Icon28PictureOutline} from '@vkontakte/icons';
+import {Icon28CalendarOutline, Icon28TargetOutline, Icon28ChevronRightOutline, Icon28PictureOutline, Icon28CancelOutline} from '@vkontakte/icons';
 
 class App extends React.Component {
 	state = {
@@ -92,11 +109,11 @@ class App extends React.Component {
 				</Panel>
 
 				<Panel id="targetDonatePostingSetup">
-					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'targetDonateAdditionalSetup'})}} />}>Konstantin Gvencadze</PanelHeader>
+					<PanelHeader left={<PanelHeaderButton onClick={() => {this.setState({activePanel: 'home'})}}><Icon28CancelOutline/></PanelHeaderButton>}>Konstantin Gvencadze</PanelHeader>
 
 					<CardGrid>
 						<Card size="l">
-							<div style={{ height: 96, backgroundImage: "url(https://images.unsplash.com/photo-1546977532-fb9cc20cac79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)" }} />
+							<div style={{ height: 96, backgroundImage: "url(https://images.unsplash.com/photo-1546977532-fb9cc20cac79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)", backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }} />
 
 
 
