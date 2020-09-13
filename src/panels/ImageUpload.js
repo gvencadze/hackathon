@@ -37,8 +37,8 @@ const ImageUpload = () => {
             </File>
             {selectedFile && <Div>
                 <img src={preview} style={{
-                    height: '300px',
-                    width: '100%',
+                    maxHeight: '100%',
+                    maxWidth: '100%',
                     borderRadius: 20
                 }}/>
             </Div>
