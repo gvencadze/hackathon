@@ -9,22 +9,13 @@ import {
 	PanelHeader,
 	View,
 	PanelHeaderBack,
-	Select,
-	FormLayout,
-	Input,
-	Textarea,
 	Button,
-	File,
-	Radio,
-	Card,
-	CardGrid,
 	PanelHeaderButton,
-	InfoRow,
-	Progress, Div
+	Div
 } from "@vkontakte/vkui";
 
 //@vkontakte icons
-import {Icon28CalendarOutline, Icon28TargetOutline, Icon28ChevronRightOutline, Icon28PictureOutline, Icon28CancelOutline} from '@vkontakte/icons';
+import {Icon28CalendarOutline, Icon28TargetOutline, Icon28ChevronRightOutline, Icon28CancelOutline} from '@vkontakte/icons';
 import TargetDonate from "./panels/targetDonate";
 import TargetDonateAdditionalSetup from "./panels/targetDonateAdditionalSetup";
 import TargetDonatePostingSetup from "./panels/targetDonatePostingSetup";
@@ -46,7 +37,7 @@ class App extends React.Component {
 							before={<Icon28TargetOutline style={{
 								color: '#3F8AE0'
 							}}/>}
-							caption="Вчера в 20:30"
+							caption="Когда есть определённая цель"
 							after={<Icon28ChevronRightOutline style={{
 								color: '#B8C1CC'
 							}}/>}
@@ -59,7 +50,7 @@ class App extends React.Component {
 							before={<Icon28CalendarOutline style={{
 								color: '#3F8AE0'
 							}} />}
-							caption="Вчера в 20:30"
+							caption="Если помощь нужна ежемесячно"
 							after={<Icon28ChevronRightOutline style={{
 								color: '#B8C1CC'
 							}}/>}
@@ -96,7 +87,7 @@ class App extends React.Component {
 
 				{/*Регулярный сбор*/}
 				<Panel id="monthlyDonate">
-					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}} />}>Регулярный сбор</PanelHeader>
+					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}}/>}>Регулярный сбор</PanelHeader>
 				</Panel>
 			</View>
 		);
