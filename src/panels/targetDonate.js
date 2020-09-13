@@ -1,14 +1,26 @@
 import React from 'react'
-import {File, FormLayout, Input, Select, Textarea} from "@vkontakte/vkui";
-import {Icon28PictureOutline} from "@vkontakte/icons";
+import {FormLayout, Input, Select, Textarea} from "@vkontakte/vkui";
+
+import ImageUpload from './ImageUpload'
 
 class TargetDonate extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+          file: null
+        }    
+        this.handleChange = this.handleChange.bind(this)
+    }
+    handleChange(event) {
+        console.log("file: " + event.target.files[0])
+        this.setState({
+            file: URL.createObjectURL(event.target.files[0])
+        })
+    }
     render() {
         return(
             <FormLayout>
-                <File before={<Icon28PictureOutline />} controlSize="xl" mode="outline">
-                    Загрузить обложку
-                </File>
+                <ImageUpload/>
 
                 <Input type="text" placeholder="Название сбора" top="Название сбора"/>
                 <Input type="text" placeholder="Сколько надо собрать?" top="Сумма, ₽"/>
