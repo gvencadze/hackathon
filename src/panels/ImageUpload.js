@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {File} from "@vkontakte/vkui";
+import {File, Div} from "@vkontakte/vkui";
 import {Icon28PictureOutline} from "@vkontakte/icons";
 
 const ImageUpload = () => {
@@ -35,7 +35,13 @@ const ImageUpload = () => {
             <File before={<Icon28PictureOutline />} controlSize="xl" mode="outline" onChange={onSelectFile}>
                 Загрузить обложку
             </File>
-            {selectedFile && <img src={preview} style={{height: '300px'}}/>
+            {selectedFile && <Div>
+                <img src={preview} style={{
+                    height: '300px',
+                    width: '100%',
+                    borderRadius: 20
+                }}/>
+            </Div>
             }
         </div>
     )
