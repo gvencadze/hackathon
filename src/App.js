@@ -37,7 +37,24 @@ class App extends React.Component {
 			<View activePanel={this.state.activePanel}
 			>
 				<Panel id="home">
-					<PanelHeader>Тип сбора</PanelHeader>
+					<PanelHeader>Пожертвования</PanelHeader>
+
+					<Div>
+						<Text style={{
+							textAlign: 'center'
+						}}>У Вас пока нет сборов.<br/>Начните
+							Начните доброе дело.</Text>
+
+						<Button size="xl" onClick={()=> {this.setState({activePanel: 'donationType'})}} style={{
+							marginTop: 20
+						}}>
+							Создать сбор
+						</Button>
+					</Div>
+				</Panel>
+
+				<Panel id="donationType">
+					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}} />}>Тип сбора</PanelHeader>
 					<Group>
 						<RichCell
 							multiline
@@ -69,7 +86,7 @@ class App extends React.Component {
 				</Panel>
 
 				<Panel id="targetDonate">
-					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}} />}>Целевой сбор</PanelHeader>
+					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'donationType'})}} />}>Целевой сбор</PanelHeader>
 					<TargetDonate/>
 					<Div>
 						<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'targetDonateAdditionalSetup'})}}>Далее</Button>
@@ -87,7 +104,7 @@ class App extends React.Component {
 				</Panel>
 
 				<Panel id="targetDonatePostingSetup">
-					<PanelHeader left={<PanelHeaderButton onClick={() => {this.setState({activePanel: 'home'})}}><Icon28CancelOutline/></PanelHeaderButton>}>Konstantin Gvencadze</PanelHeader>
+					<PanelHeader left={<PanelHeaderButton onClick={() => {this.setState({activePanel: 'donationType'})}}><Icon28CancelOutline/></PanelHeaderButton>}>Konstantin Gvencadze</PanelHeader>
 					<TargetDonatePostingSetup/>
 
 					<Div>
@@ -154,7 +171,7 @@ class App extends React.Component {
 
 				<Panel id="targetDonateDetailView">
 					<PanelHeader
-						left={<PanelHeaderButton><Icon28CancelOutline onClick={() => {this.setState({activePanel: 'home'})}} /></PanelHeaderButton>}
+						left={<PanelHeaderButton><Icon28CancelOutline onClick={() => {this.setState({activePanel: 'donationType'})}} /></PanelHeaderButton>}
 						separator={false}
 					>О пожертвовании</PanelHeader>
 
@@ -164,7 +181,7 @@ class App extends React.Component {
 
 				{/*Регулярный сбор*/}
 				<Panel id="monthlyDonate">
-					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}}/>}>Регулярный сбор</PanelHeader>
+					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'donationType'})}}/>}>Регулярный сбор</PanelHeader>
 					<MonthlyDonate/>
 					<Div>
 						<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'monthlyDonatePostingSetup'})}}>Далее</Button>
@@ -237,7 +254,7 @@ class App extends React.Component {
 
 				<Panel id="monthlyDonateDetailView">
 					<PanelHeader
-						left={<PanelHeaderButton><Icon28CancelOutline onClick={() => {this.setState({activePanel: 'home'})}} /></PanelHeaderButton>}
+						left={<PanelHeaderButton><Icon28CancelOutline onClick={() => {this.setState({activePanel: 'donationType'})}} /></PanelHeaderButton>}
 						separator={false}
 					>О пожертвовании</PanelHeader>
 
