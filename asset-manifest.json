@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/hackathon/static/js/main.c64c3389.chunk.js",
+    "main.js.map": "/hackathon/static/js/main.c64c3389.chunk.js.map",
+    "runtime-main.js": "/hackathon/static/js/runtime-main.69ad9609.js",
+    "runtime-main.js.map": "/hackathon/static/js/runtime-main.69ad9609.js.map",
+    "static/css/2.09e62520.chunk.css": "/hackathon/static/css/2.09e62520.chunk.css",
+    "static/js/2.35266670.chunk.js": "/hackathon/static/js/2.35266670.chunk.js",
+    "static/js/2.35266670.chunk.js.map": "/hackathon/static/js/2.35266670.chunk.js.map",
+    "index.html": "/hackathon/index.html",
+    "precache-manifest.c9a22b0ff494d86e601ad6ece6bde265.js": "/hackathon/precache-manifest.c9a22b0ff494d86e601ad6ece6bde265.js",
+    "service-worker.js": "/hackathon/service-worker.js",
+    "static/css/2.09e62520.chunk.css.map": "/hackathon/static/css/2.09e62520.chunk.css.map",
+    "static/js/2.35266670.chunk.js.LICENSE.txt": "/hackathon/static/js/2.35266670.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69ad9609.js",
+    "static/css/2.09e62520.chunk.css",
+    "static/js/2.35266670.chunk.js",
+    "static/js/main.c64c3389.chunk.js"
+  ]
+}
