@@ -20,7 +20,7 @@ import {
 	CardGrid,
 	PanelHeaderButton,
 	InfoRow,
-	Progress
+	Progress, Div
 } from "@vkontakte/vkui";
 
 //@vkontakte icons
@@ -73,13 +73,19 @@ class App extends React.Component {
 				<Panel id="targetDonate">
 					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'home'})}} />}>Целевой сбор</PanelHeader>
 					<TargetDonate/>
-					<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'targetDonateAdditionalSetup'})}}>Далее</Button>
+					<Div>
+						<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'targetDonateAdditionalSetup'})}}>Далее</Button>
+					</Div>
 				</Panel>
 
 				<Panel id="targetDonateAdditionalSetup">
 					<PanelHeader left={<PanelHeaderBack onClick={() => {this.setState({activePanel: 'targetDonate'})}} />}>Дополнительно</PanelHeader>
 					<TargetDonateAdditionalSetup/>
-					<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'targetDonatePostingSetup'})}}>Создать сбор</Button>
+
+					<Div>
+						<Button size="xl" mode="primary" onClick={() => {this.setState({activePanel: 'targetDonatePostingSetup'})}}>Создать сбор</Button>
+					</Div>
+
 				</Panel>
 
 				<Panel id="targetDonatePostingSetup">
