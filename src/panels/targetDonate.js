@@ -6,8 +6,14 @@ class TargetDonate extends React.Component {
     render() {
         return(
             <FormLayout>
-                <File before={<Icon28PictureOutline />} controlSize="xl" mode="outline">
-                    Загрузить обложку
+                <File style={{
+                    height: '120px'
+                }} before={<Icon28PictureOutline />} controlSize="xl" mode="outline">
+                    <p style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>Выбрать фото</p>
                 </File>
 
                 <Input type="text" placeholder="Название сбора" top="Название сбора"/>
