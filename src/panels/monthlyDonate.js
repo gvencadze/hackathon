@@ -28,8 +28,8 @@ class MonthlyDonate extends React.Component {
                 <Textarea top="Описание" placeholder="На что пойдут деньги и как они кому-то помогут?" />
 
                 <Select top="Куда получать деньги">
-                    <option value="vkpay">Счёт VK Pay 1234</option>
-                    <option value="mastercard">Счёт MasterCard 1234</option>
+                    <option value="vkpay">Счёт VK Pay ∙ 1234</option>
+                    <option value="mastercard">Счёт MasterCard ∙ 1234</option>
                 </Select>
 
                 <Select top="Автор">
