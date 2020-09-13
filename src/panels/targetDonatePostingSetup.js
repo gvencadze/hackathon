@@ -19,12 +19,23 @@ class TargetDonatePostingSetup extends React.Component {
                             borderTopRightRadius: 10
                         }}/>
 
+                        <Div>
+                            <Text>Добряши помогают барсикам</Text>
+
+                            <Text style={{
+                                color: '#818C99',
+                                fontSize: '10pt'
+                            }}>
+                                Матвей Правосудов · Закончится через 5 дней
+                            </Text>
+                        </Div>
+
                         <Div style={{
                             display: 'flex',
                             justifyContent: 'space-between'
                         }}>
                             <InfoRow header="Помогите первым">
-                                <Progress value={100}/>
+                                <Progress value={0}/>
                             </InfoRow>
                             <Button size="m" mode="primary" disabled>Помочь</Button>
                         </Div>
