@@ -1,22 +1,10 @@
 import React from 'react'
-import {Button, Card, CardGrid, Div, InfoRow, Progress, Text, RichCell, Avatar} from "@vkontakte/vkui";
+import {Button, Card, CardGrid, Div, InfoRow, Progress, Text} from "@vkontakte/vkui";
 
-import Icon16MoreHorizontal from '@vkontakte/icons/dist/16/more_horizontal';
-
-class TargetDonateNewsFeedSnippet extends React.Component{
+class MonthlyDonatePostingSetup extends React.Component {
     render() {
         return(
             <Div>
-                <RichCell
-                    disabled
-                    multiline
-                    before={<Avatar size={44} src="https://sun9-48.userapi.com/c852236/v852236758/1c06e6/1TslavjeEL0.jpg" />}
-                    caption="час назад"
-                    after={<Icon16MoreHorizontal/>}
-                >
-                    Konstantin Gvencadze
-                </RichCell>
-
                 <Div>
                     <Text>Сейчас самое время помочь тем, кто не может попросить о помощи сам.</Text>
                 </Div>
@@ -38,7 +26,7 @@ class TargetDonateNewsFeedSnippet extends React.Component{
                                 color: '#818C99',
                                 fontSize: '10pt'
                             }}>
-                                Konstantin Gvencadze · Закончится через 5 дней
+                                Konstantin Gvencadze · Помощь нужна каждый месяц
                             </Text>
                         </Div>
 
@@ -46,10 +34,10 @@ class TargetDonateNewsFeedSnippet extends React.Component{
                             display: 'flex',
                             justifyContent: 'space-between'
                         }}>
-                            <InfoRow header="Собрано 8 750 ₽ из 10 000 ₽">
-                                <Progress value={87}/>
+                            <InfoRow header="Помогите первым">
+                                <Progress value={0}/>
                             </InfoRow>
-                            <Button size="m" mode="primary">Помочь</Button>
+                            <Button size="m" mode="primary" disabled>Помочь</Button>
                         </Div>
                     </Card>
                 </CardGrid>
@@ -58,4 +46,4 @@ class TargetDonateNewsFeedSnippet extends React.Component{
     }
 }
 
-export default TargetDonateNewsFeedSnippet
+export default MonthlyDonatePostingSetup
